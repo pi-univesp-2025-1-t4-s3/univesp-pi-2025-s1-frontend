@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          PI Univesp 2025/S1
+          PI Univesp 2025/S1 - T4 S3
         </p>
       </header>
     </div>
