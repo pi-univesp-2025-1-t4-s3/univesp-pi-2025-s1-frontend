@@ -1,0 +1,142 @@
+main {
+
+    width: 100%; height: 100vh;
+
+   display: flex; flex-direction: column;
+
+   align-items: center; justify-content: center;
+
+}
+
+main .logo {
+
+    width: 100%; height: fit-content;
+
+    display: grid; place-items: center;
+   
+}
+
+main .logo img {
+
+   width: 25%; object-fit: contain;
+   
+}
+
+main section {
+
+    width: 100%; flex-grow: 1; 
+
+    display: flex; flex-direction: column;
+
+    align-items: center; justify-content: start;
+}
+
+main section form {
+
+    width: 60%; height: 80%;
+
+    border-radius: 9px; display: flex;
+
+    flex-direction: column; align-items: center;
+
+    justify-content: space-around; background: white;
+
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3), -1rem -1rem 2rem rgba(140, 204, 207, 0.429);
+}
+
+main section form label {
+
+    width: 90%; height: 4rem;
+    
+    display: flex; align-items: center;
+
+    justify-content: center;
+
+}
+
+main section form label input {
+
+    width: 70%; height: 3rem;
+
+    background-color: rgb(237, 237, 237);
+
+    border-radius: 4px; text-align: center;
+
+    padding: 0 1rem; margin-left: 1rem;
+}
+
+main section form input[type=submit] {
+
+    width: 80%; height: 3rem;
+
+    border-radius: 9px; text-align: center;
+
+    line-height: 3rem; background: rgb(0, 38, 103);
+
+    color: white; transition: 0.3s;
+}
+
+main section form input[type=submit]:hover {
+
+    background: rgb(0, 65, 176);
+}
+
+
+main section .message_popup {
+
+    position: fixed; top: 0;
+
+    left: 0;  width: 100%;
+
+    height: 100%; background-color: rgba(0, 0, 0, 0.4);
+
+    display: grid; place-items: center;
+}
+
+main section .message_popup p {
+
+    width: 40%; height: 5rem;
+
+    text-align: center; line-height: 5rem;
+
+    background-color: rgb(20, 20, 20); color: rgb(226, 125, 0);
+
+    border-radius: 4px;
+}
+
+
+/* mobile version */
+
+@media (max-width: 650px) {
+    main .logo img {
+
+        width: 80%; object-fit: contain;
+        
+    }
+
+    main section form {
+
+        width: 95%; 
+    }
+
+    main section form label {
+
+        flex-direction: column; align-items: center;
+    
+        justify-content: center;
+    
+    }
+}
+
+@media (max-width: 800px) {
+    main .logo img {
+
+        width: 40%; object-fit: contain;
+        
+    }
+
+    main section form {
+
+        width: 85%; 
+    }
+}
