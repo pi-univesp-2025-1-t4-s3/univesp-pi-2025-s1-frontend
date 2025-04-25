@@ -1,6 +1,6 @@
 import logo from '../../logo inarisys_2.png'
 
-export function LogoInariSys({ style }) {
+export function LogoInariSys({ style }: { style : any}) {
 
     return (
         <div className={style.logo}>

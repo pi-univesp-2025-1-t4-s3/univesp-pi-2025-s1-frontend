@@ -27,7 +27,7 @@ export async function protected_routes_loader() {
         }
 
         throw new Error('no credentials provided error')
-    } catch (error) {
+    } catch (error: any) {
         console.log('\n\nerror:\n\n' + error.message)
         return redirect('/login')
     }

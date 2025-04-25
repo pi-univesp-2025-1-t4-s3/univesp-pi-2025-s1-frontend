@@ -8,6 +8,7 @@ import MainLayout from './layout'
 import InitialPage from './routes/initial/initial'
 import Login from './routes/login/login'
 import Menu from './routes/menu/menu'
+import { Perfil } from './routes/perfil/perfil'
 
 //actions
 
@@ -17,7 +18,8 @@ import { action as login_action } from './routes/login/login_action'
 
 import { protected_routes_loader } from './protected_routes_loader'
 import { loader as logout } from './routes/logout'
-import { Perfil } from './routes/perfil/perfil'
+import  perfil_loader  from './routes/perfil/perfil_loader'
+import { Progress } from './routes/progress/progress'
 
 
 const router = createBrowserRouter([
@@ -52,7 +54,20 @@ const router = createBrowserRouter([
           },
           {
             path: '/perfil',
-            element: <Perfil/>
+            element: <Perfil/>,
+            loader: perfil_loader
+          },
+          {
+            path: '/products',
+            element: <Progress/>,
+          },
+          {
+            path: '/stock',
+            element: <Progress/>,
+          },
+          {
+            path: '/sales',
+            element: <Progress/>,
           }
         ],
       }

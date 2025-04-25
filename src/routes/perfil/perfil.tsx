@@ -1,13 +1,12 @@
-
 import { Link, useLoaderData } from "react-router";
 import { LogoInariSys } from "../../assets/components/logo/logo";
 import style from './perfil.module.css'
 
-export async function Perfil({ loaderData }) {
+export async function Perfil() {
 
-    const data = loaderData
+    const data = useLoaderData()
     return (
-        <main>
+        <main className={style.main_perfilpage}>
 
             <header>
 
