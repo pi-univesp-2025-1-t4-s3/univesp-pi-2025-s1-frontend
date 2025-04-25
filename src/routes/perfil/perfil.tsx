@@ -6,8 +6,10 @@ import style from './perfil.module.css'
 export async function Perfil() {
 
     const data = useLoaderData() as any;
+
+    console.log("data:",data)
     return (
-        <main>
+        <main className={style.main_perfilpage}>
 
             <header>
 

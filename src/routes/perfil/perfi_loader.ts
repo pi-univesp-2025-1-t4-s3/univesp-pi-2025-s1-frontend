@@ -2,7 +2,7 @@ import { redirect } from "react-router";
 import { CookieManager } from "../../services/cookieservice";
 
 
-export async function Loader ({}: { request: Request}) {
+export async function Loader() {
 
     try {
         const user=  JSON.parse(await new CookieManager().get() as string).split('.')
