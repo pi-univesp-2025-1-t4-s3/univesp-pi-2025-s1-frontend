@@ -5,9 +5,12 @@ import axios from 'axios'
 
 export async function protected_routes_loader() {
 
-    const creds: any = JSON.parse(await new CookieManager().get() as string);
+   
 
     try {
+
+        const creds: any = JSON.parse(await new CookieManager().get() as string);
+        
         if(creds) {
 
             const res = await axios.get('https://inarisys.koyeb.app/', {
