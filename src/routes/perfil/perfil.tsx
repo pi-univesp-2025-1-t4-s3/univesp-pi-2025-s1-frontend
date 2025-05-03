@@ -4,7 +4,9 @@ import style from './perfil.module.css'
 
 export async function Perfil() {
 
-    const data = useLoaderData()
+    const data = useLoaderData() as any;
+
+    console.log("data:",data)
     return (
         <main className={style.main_perfilpage}>
 

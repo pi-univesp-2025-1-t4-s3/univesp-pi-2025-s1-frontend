@@ -5,12 +5,10 @@ import axios from 'axios'
 
 export async function protected_routes_loader() {
 
-   
-
     try {
 
         const creds: any = JSON.parse(await new CookieManager().get() as string);
-        
+
         if(creds) {
 
             const res = await axios.get('https://inarisys.koyeb.app/', {
@@ -27,8 +25,9 @@ export async function protected_routes_loader() {
         }
 
         throw new Error('no credentials provided error')
-    } catch (error: any) {
-        console.log('\n\nerror:\n\n' + error.message)
+    } catch (error:any) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.log('\n\nerror:\n\n' + message)
         return redirect('/login')
     }
 }
