@@ -9,8 +9,6 @@ export default async function Loader() {
 
         if(user) {
 
-            let tmp:any = Buffer.from(user[1], 'base64').toJSON()
-
             return JSON.parse(window.atob(user[1])).sub
         }
         throw new Error()
