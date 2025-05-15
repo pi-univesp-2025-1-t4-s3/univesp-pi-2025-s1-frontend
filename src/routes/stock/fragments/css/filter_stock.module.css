@@ -1,0 +1,49 @@
+.filter_stock_container {
+
+    width: 60%; height: fit-content;
+
+    display: flex; align-items: center;
+
+    justify-content: space-around;
+
+    background-color: white; border-radius: 8px;
+
+    padding: 1rem;
+}
+
+.filter_stock_container label {
+
+    flex-grow: 3; height: 3rem;
+
+    display: flex; align-items: center;
+
+    justify-content: space-around;
+
+
+}
+
+.filter_stock_container label input {
+
+    width: 75%; height: 3rem;
+
+    background-color: rgb(245 245 245); border-radius: 8px;
+
+    text-align: center;
+}
+
+.filter_stock_container button {
+
+    flex-grow: 1; height: 3rem;
+
+    border-radius: 8px; color: rgb(30 30 30);
+
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+
+    transition: 0.3s;
+}
+
+.filter_stock_container button:hover {
+
+    background-color: rgb(30 30 30); color: white;
+
+}
