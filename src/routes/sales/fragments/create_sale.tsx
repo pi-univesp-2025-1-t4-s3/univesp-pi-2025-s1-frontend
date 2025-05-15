@@ -2,7 +2,7 @@ import { useRef, useState } from "react"
 import { create_Sale, handle_ItemSales_Quantity, handle_Select_Product, searchProducts } from "./create_sale_process"
 import { Message } from "../../../assets/components/message/message"
 
-import style from './css/create_Sale.module.css'
+import style from './css/create_sale.module.css'
 import { ClickOutside } from "../../../assets/components/clickoutside/clickoutside"
 import { Sale } from "../sales"
 
