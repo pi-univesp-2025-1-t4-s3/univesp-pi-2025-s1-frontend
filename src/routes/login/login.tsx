@@ -5,44 +5,35 @@ import style from './login.module.css'
 //logo
 import { useEffect, useRef, useState } from 'react'
 import { LogoInariSys } from '../../assets/components/logo/logo'
+import { Message } from '../../assets/components/message/message'
+import { ClickOutside } from '../../assets/components/clickoutside/clickoutside'
 
 export default function Login(){
 
     const actiondata = useActionData()
     const [login_message, setMessage] = useState(actiondata?.message || null)
 
-    const refMessage = useRef<HTMLParagraphElement>(null)
+    const refMessage = useRef<HTMLElement>(null)
 
     useEffect(() => {
 
         if(actiondata?.message) {
             setMessage(actiondata?.message)
-            refMessage.current?.focus()
-            useActionData
         }
 
     }, [ actiondata?.id ])
 
-    function message_box_click() {
-        setMessage(null)
-    }
 
-    return (<main className={style.main}>
+    ClickOutside({popupState: login_message, closeAction: () => setMessage(null), ref: refMessage})
+
+    return (<main className={style.loginpage}>
             
             <LogoInariSys style={style}/>
 
             <section>
 
                 {
-                    login_message && (
-
-                        <div className={style.message_popup} onClick={message_box_click}>
-
-                            <p ref={refMessage} tabIndex={-1}  aria-live="assertive">
-                                Message: {login_message}
-                            </p>
-                        </div>
-                    )
+                    login_message && <Message message={actiondata.message} style={style} ref={refMessage}/>
                 }
 
                 <Form method='POST'>

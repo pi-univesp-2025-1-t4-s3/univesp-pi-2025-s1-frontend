@@ -14,5 +14,5 @@ html, body, div#root {
 
     box-sizing: border-box;
 
-    background: linear-gradient(170deg,  rgb(255, 255, 255) 3%, rgb(237, 126, 0) 100%); /*green rgb(0, 237, 75) ; blue rgb(0, 221, 237) ;  yellow rgb(237, 237, 0) ;          */
+    background: linear-gradient(170deg,  rgba(255, 255, 255, 0.279) 3%, rgb(237, 126, 0) 100%); /*green rgb(0, 237, 75) ; blue rgb(0, 221, 237) ;  yellow rgb(237, 237, 0) ;          */
 }

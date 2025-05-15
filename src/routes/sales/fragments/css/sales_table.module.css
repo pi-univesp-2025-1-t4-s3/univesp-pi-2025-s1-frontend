@@ -1,0 +1,118 @@
+section.table_sales_container_salepage {
+
+    display: flex; align-items: center;
+
+    margin-top: 2rem;
+    
+    box-shadow: 0 0 1rem rgba(48, 48, 48, 0.4),  -0.3rem -0.3rem 1rem rgba(255, 255, 255, 0.47);
+
+    box-sizing: border-box;
+    
+}
+
+section.table_sales_container_salepage table {
+
+    width: 100%; height: 100%; border-spacing: 0;
+
+    background: white; border-radius: 8px;
+}
+
+section.table_sales_container_salepage table thead {
+
+    width: 100%; height: fit-content;
+}
+
+section.table_sales_container_salepage table tbody {
+
+    width: 100%; height: fit-content;
+}
+
+section.table_sales_container_salepage table tr {
+
+    width: 100%; height: 3rem; display: flex; align-items: center;
+
+    justify-content: space-around;
+}
+
+section.table_sales_container_salepage table tr.sales_tr_header {
+
+    border-radius: 8px 8px 0 0; box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+section.table_sales_container_salepage table tr td, section.table_sales_container_salepage table tr th {
+
+    width: 33.4%; text-align: center; 
+
+    line-height: 3rem; height: 3rem;
+}
+
+section.table_sales_container_salepage table tr td.salepage_td_has_buttons {
+
+    display: flex; align-items: center; justify-content: space-around;
+}
+
+section.table_sales_container_salepage table tr td.salepage_td_has_buttons button {
+
+    width: 30%; height: 90%; 
+
+    text-align: center; line-height: 90%;
+
+    transition: 0.2s;  border-radius: 8px;
+}
+
+section.table_sales_container_salepage table tr td.salepage_td_has_buttons button.sale_button_delete {
+
+    color: red;
+}
+
+section.table_sales_container_salepage table tr td.salepage_td_has_buttons button:hover {
+
+    cursor: pointer;
+}
+
+section.table_sales_container_salepage table tr td.salepage_td_has_buttons button:hover{
+
+    background-color: rgb(30 30 30); color: white;
+}
+
+
+.details_sale_container {
+
+    position: fixed; width: 100vw;
+
+    height: 100vh; background-color: rgba(0, 0, 0, 0.2);
+
+    box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.2);
+
+    display: grid; place-items: center;
+
+    top: 0; left: 0;
+}
+
+.details_sale_container article {
+
+    width: 40%; height: fit-content;
+
+    padding: 2rem 1rem; box-sizing: border-box;
+
+    display: flex; flex-direction: column;
+
+    align-items: start;  background-color: white;
+
+    border-radius: 8px;
+}
+
+
+.details_sale_container article .product_item_detail_sale {
+
+    width: 80%; height: 3rem;
+
+    display: flex; align-items: center;
+
+    justify-content: start; margin-bottom: 1rem;
+}
+
+.details_sale_container article .product_item_detail_sale > * {
+
+    margin-right: 1rem;
+}

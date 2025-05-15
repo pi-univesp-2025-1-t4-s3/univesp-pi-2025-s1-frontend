@@ -1,0 +1,72 @@
+div.filter_container_productpage {                          /*  filter container */
+
+    width: 70%; height: fit-content; display: flex;
+
+    flex-direction: column; align-items: center;
+
+    box-sizing: border-box; justify-content: space-around;
+
+    padding: 0.5rem; background-color: white;
+
+    box-shadow: 0 0 1rem rgba(48, 48, 48, 0.4),  -0.3rem -0.3rem 1rem rgba(255, 255, 255, 0.47);
+
+    border-radius: 8px; 
+}
+
+
+div.filter_container_productpage fieldset {
+
+    width: 100%; flex-grow: 1;
+
+    display: flex; align-items: center;
+
+    justify-content: space-around;
+}
+
+div.filter_container_productpage fieldset[fieldset-has-button="true"] {
+
+    width: 100%; flex-grow: 1;
+
+    display: flex; align-items: center;
+
+    justify-content: end;
+}
+
+div.filter_container_productpage fieldset.price_fieldset input, div.filter_container_productpage fieldset.price_fieldset select{
+
+    flex-grow: 1; height: 2rem; text-align: center;
+
+    line-height: 2rem; border-radius: 4px;
+
+}
+
+div.filter_container_productpage fieldset > * {
+
+    flex-grow: 1; height: 2rem;
+}
+
+div.filter_container_productpage fieldset input {
+
+    flex-grow: 1.5; height: 2rem; text-align: center;
+
+    line-height: 2rem; padding: 0 1rem; box-sizing: border-box;
+
+    background: rgb(245 245 245);
+}
+
+div.filter_container_productpage fieldset button {
+
+    flex-grow: 0.25; height: 2.5rem; 
+
+    text-align: center; line-height: 2.5rem;
+
+    color: white; background: rgb(27, 193, 24);
+
+    transition: 0.3s; border-radius: 8px;
+
+}
+
+div.filter_container_productpage fieldset button:hover {
+
+    background: rgb(33, 234, 29); cursor: pointer;
+}

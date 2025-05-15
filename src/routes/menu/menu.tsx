@@ -8,7 +8,7 @@ import { LogoInariSys } from '../../assets/components/logo/logo'
 
 export default function Menu(){
 
-    return (<main className={style.main}>
+    return (<main className={style.menupage}>
             
             <header>
 
@@ -23,7 +23,7 @@ export default function Menu(){
 
                 <Link to={'/products'}>Produtos</Link>
                 <Link to={'/stock'}>Estoque</Link>
-                <Link to={'/sales'}>Pedidos</Link>
+                <Link to={'/sales'}>Vendas</Link>
 
             </section>
     </main>)

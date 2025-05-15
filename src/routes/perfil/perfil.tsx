@@ -6,7 +6,6 @@ export async function Perfil() {
 
     const data = useLoaderData() as any;
 
-    console.log("data:",data)
     return (
         <main className={style.main_perfilpage}>
 

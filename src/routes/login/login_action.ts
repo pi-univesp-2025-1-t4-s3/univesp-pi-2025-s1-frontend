@@ -9,33 +9,31 @@ export async function action({request}: {request: Request}){
 
     const formdata = await request.formData()
 
-    let body = JSON.stringify(   Object.fromEntries(   formdata.entries()  ) )
-
-    const res = await axios.post('https://inarisys.koyeb.app/auth/login',body, {
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-
     try {
+        let body = JSON.stringify(   Object.fromEntries(   formdata.entries()  ) )
+
+        const res = await axios.post('https://inarisys.koyeb.app/auth/login',body, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+
+    
         if(res.status == 200){
 
             const manager = new CookieManager()
 
             await manager.delete()
-            await manager.set(JSON.stringify(await res.data))
+            await manager.set(JSON.stringify(res.data))
 
             return redirect('/menu')
         }
-        else if ( res.status == 403){
-            throw Error("Unauthorized credentials")
-        }
-        else {
-            throw Error("server authentication error. Please, try again later...")
-        }
         
     } catch (error: any) {
-        console.log(error)
-        return {message: error.message, id: Date.now()}
+        if(error.message.includes('403')){
+            return {message: 'Credenciais não autorizadas', id: Date.now()}
+        }
+        
+        return {message: 'Ocorreu erros internos no servidor, tente novamente mais tarde', id: Date.now()}
     }
 }
