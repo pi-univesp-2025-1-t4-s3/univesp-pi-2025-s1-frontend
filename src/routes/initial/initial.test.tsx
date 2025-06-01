@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import '@testing-library/jest-dom'
 
 // 🔁 mocks
@@ -13,9 +13,9 @@ import InitialPage from './initial'
 describe('InitialPage', () => {
   it('renderiza o logo e o link de login', () => {
     render(
-      <BrowserRouter>
+      <MemoryRouter>
         <InitialPage />
-      </BrowserRouter>
+      </MemoryRouter>
     )
 
     expect(screen.getByText('Logo')).toBeInTheDocument()

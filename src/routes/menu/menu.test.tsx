@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import '@testing-library/jest-dom'
 
 // mock do Logo
@@ -14,9 +14,9 @@ import Menu from './menu'
 describe('Menu', () => {
   it('renderiza todos os links corretamente', () => {
     render(
-      <BrowserRouter>
+      <MemoryRouter>
         <Menu />
-      </BrowserRouter>
+      </MemoryRouter>
     )
 
     expect(screen.getByText('Sair')).toBeInTheDocument()
