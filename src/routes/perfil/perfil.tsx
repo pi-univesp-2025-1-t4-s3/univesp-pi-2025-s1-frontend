@@ -2,7 +2,7 @@ import { Link, useLoaderData } from "react-router";
 import { LogoInariSys } from "../../assets/components/logo/logo";
 import style from './perfil.module.css'
 
-export async function Perfil() {
+export function Perfil() {
 
     const data = useLoaderData() as any;
 
